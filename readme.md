@@ -44,33 +44,33 @@ All written in **TensorFlow 2 (Eager Execution)**:
 
 #### Bounding Box Parameterization
 
-\[
+$$
 b_x = \sigma(t_x) + c_x, \quad b_y = \sigma(t_y) + c_y
-\]
+$$
 
-\[
+$$
 b_w = p_w e^{t_w}, \quad b_h = p_h e^{t_h}
-\]
+$$
 
 Where:
 
-- \( (c_x, c_y) \) = grid cell location
-- \( (p_w, p_h) \) = anchor dimensions
-- \( \sigma \) = sigmoid
+- $( (c_x, c_y) )$ = grid cell location
+- $( (p_w, p_h) )$ = anchor dimensions
+- $( \sigma )$ = sigmoid
 
 ---
 
 #### Score Computation
 
-\[
+$$
 \text{Class Score}\_i = P_c \times P(\text{class}\_i \mid \text{object})
-\]
+$$
 
 Final score:
 
-\[
+$$
 \max_i \Big(P_c \cdot P(\text{class}\_i \mid \text{object})\Big)
-\]
+$$
 
 Thresholding removes background and low-confidence detections.
 
@@ -78,9 +78,9 @@ Thresholding removes background and low-confidence detections.
 
 #### Intersection over Union (IoU)
 
-\[
+$$
 IoU = \frac{\text{Area of Intersection}}{\text{Area of Union}}, \quad \text{Union} = A + B - \text{Intersection}
-\]
+$$
 
 - IoU = 0 → no overlap
 - IoU = 1 → perfect overlap
