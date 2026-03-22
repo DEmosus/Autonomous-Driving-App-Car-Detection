@@ -1,4 +1,4 @@
-# 🚗 Autonomous Driving — Car Detection with YOLO (Deep Study Project)
+# 🚗 Autonomous Driving — Car Detection with YOLO
 
 ---
 
